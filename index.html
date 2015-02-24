@@ -17,6 +17,9 @@
     <!-- Custom CSS -->
     <link href="css/one-page-wonder.css" rel="stylesheet">
 
+    <!--Scroll Css -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,10 +27,12 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    
+
+
 </head>
 
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -60,7 +65,11 @@
         <!-- /.container -->
     </nav>
 
+
+<div id="fullpage">
+ <div class="container">
     <!-- Full Width Image Header -->
+    <div class="section" id="section0">
     <header class="header-image">
         <div class="headline">
             <div class="container">
@@ -69,12 +78,11 @@
             </div>
         </div>
     </header>
-
+</div>
     <!-- Page Content -->
-    <div class="container">
 
-        <hr class="featurette-divider">
-
+   
+        <div class="section" id="section1">
         <!-- First Featurette -->
         <div class="featurette" id="about">
             <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
@@ -83,10 +91,10 @@
             </h2>
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-
-        <hr class="featurette-divider">
+</div>
 
         <!-- Second Featurette -->
+<div class="section" id="section2">
         <div class="featurette" id="services">
             <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
             <h2 class="featurette-heading">The Second Heading
@@ -94,9 +102,8 @@
             </h2>
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-
-        <hr class="featurette-divider">
-
+</div>
+<div class="section" id="section3">
         <!-- Third Featurette -->
         <div class="featurette" id="contact">
             <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
@@ -105,8 +112,7 @@
             </h2>
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-
-        <hr class="featurette-divider">
+</div>
 
         <!-- Footer -->
         <footer>
@@ -126,6 +132,21 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- Navigation -->
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', '3rdPage'],
+                sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['First page', 'Second page', 'Third and last page']
+            });
+        });
+    </script>
+</div>
 </body>
 
 </html>
